@@ -34,7 +34,7 @@ function App() {
           linear
           id='three-canvas-container'
         >
-          <OrbitControls />
+          <OrbitControls enablePan={false} maxDistance={6} minDistance={1} />
           <Box toggle={boxToggle} />
           {/*Light*/}
           <Environment
