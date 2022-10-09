@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+/* Canvas Style*/
+
+.dark-theme {
+  --clr-bcg: #000;
+  --clr-font: #fff;
+  --clr-button: #3d5360;
+  --clr-hover: #3d5360;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-theme {
+  --clr-bcg: #fff;
+  --clr-font: #000;
+  --clr-button: #ffcfff;
+  --clr-hover: #ffcfff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+}
+.three-canvas-container {
+  background-color: var(--clr-bcg);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  transition: 0.4s;
+}
+
+/* Start of  Header Style*/
+h1 {
+  color: var(--clr-font) !important;
+  font-size: 1rem;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.2rem;
+  letter-spacing: 0.1rem;
+  transition: 0.4s;
+}
+.header-container {
+  margin: 2rem;
+  width: 25%;
+  z-index: 10;
+  position: absolute;
+  top: 10px;
+}
+/* End of  Hedaer Style*/
+/* Start of  Buttons Style*/
+.icons-container {
+  margin: 2rem;
+  width: 10%;
+
+  z-index: 10;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-container {
+    visibility: hidden;
+    margin: 2rem;
+    width: 0%;
+
+    z-index: 10;
+    position: absolute;
+    top: 10px;
+  }
+  .icons-container {
+    margin: auto !important;
+    right: 50%;
+    transform: translateX(50%);
+    top: 90%;
+    width: fit-content;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+a {
+  color: inherit !important;
+}
+.btn {
+  width: 2rem;
+  height: 2rem;
+  color: var(--clr-bcg);
+  background-color: var(--clr-font);
+
+  padding: 0;
+  margin: 0.2rem;
+
+  border: 0;
+
+  border-radius: 50%;
+}
+.btn:hover {
+  width: 2rem;
+  height: 2rem;
+  color: var(--clr-bcg);
+  background-color: var(--clr-hover);
+
+  padding: 0;
+  margin: 0.2rem;
+
+  border: 0;
+
+  border-radius: 50%;
+}
+
+/* End of  Buttons Style*/
+
+/* Start of toggle Styles*/
+.toggle-section {
+  height: 25px;
+  width: 100%;
+
+  position: absolute;
+  top: 50px;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-switch {
+  background-color: var(--clr-button) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+}
+
+.loading-text {
+  width: 200px;
+  font-size: 3rem;
+  position: relative;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
