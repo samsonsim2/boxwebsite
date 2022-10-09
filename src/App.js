@@ -3,7 +3,7 @@ import Box from './components/Box'
 import './App.css'
 import 'antd/dist/antd.min.css'
 import { Switch } from 'antd'
-import { Environment } from '@react-three/drei'
+import { Environment, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { FaInstagram, FaTwitter, FaBehance } from 'react-icons/fa'
 import { Suspense, useState } from 'react'
@@ -34,6 +34,7 @@ function App() {
           linear
           id='three-canvas-container'
         >
+          <OrbitControls />
           <Box toggle={boxToggle} />
           {/*Light*/}
           <Environment
